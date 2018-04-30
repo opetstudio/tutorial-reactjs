@@ -1,18 +1,46 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-import '../App.css';
+import {
+  Container,
+  Grid,
+  Header,
+  Responsive,
+  Segment,
+  Image
+} from 'semantic-ui-react';
+import FooterContainer from '../containers/FooterContainer';
 
 class ContactPage extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          ini adalah halaman Contact
-        </p>
+      <div>
+        <Segment style={{ padding: '8em 0em' }} vertical>
+          <Grid container stackable verticalAlign='middle'>
+            <Grid.Row>
+              <Grid.Column width={8}>
+                <Header as='h3' style={{ fontSize: '2em' }}>We Help Companies and Companions</Header>
+                <p style={{ fontSize: '1.33em' }}>
+                  We can give your company superpowers to do things that they never thought possible. Let us delight
+                  your customers and empower your needs... through pure data analytics.
+                </p>
+                <Header as='h3' style={{ fontSize: '2em' }}>We Make Bananas That Can Dance</Header>
+                <p style={{ fontSize: '1.33em' }}>
+                  Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+                </p>
+              </Grid.Column>
+              <Grid.Column floated='right' width={6}>
+                <Image
+                  bordered
+                  rounded
+                  size='large'
+                  src='https://react.semantic-ui.com/assets/images/wireframe/white-image.png'
+                />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Segment>
+        <Segment inverted vertical style={{ padding: '5em 0em' }}>
+          <FooterContainer />
+        </Segment>
       </div>
     );
   }
