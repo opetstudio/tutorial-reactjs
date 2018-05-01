@@ -25,13 +25,13 @@ class MobileContainer extends Component {
     render() {
       const { children } = this.props
       const { sidebarOpened } = this.state
-      const isHome = window.location.pathname==='/home'
+      const isHome = window.location.pathname==='/home' || window.location.pathname==='/'
   
       return (
         <Responsive {...Responsive.onlyMobile}>
           <Sidebar.Pushable>
             <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
-            <Menu.Item as={Link} to='/home' active={window.location.pathname==='/home'}>Home</Menu.Item>
+            <Menu.Item as={Link} to='/home' active={isHome}>Home</Menu.Item>
             <Menu.Item as={Link} to='/about' active={window.location.pathname==='/about'}>About</Menu.Item>
             <Menu.Item as={Link} to='/contact' active={window.location.pathname==='/contact'}>Contact</Menu.Item>
             </Sidebar>
