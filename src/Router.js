@@ -7,6 +7,7 @@ import {
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import TictactoePage from './pages/TictactoePage';
 import ResponsiveContainer from './containers/ResponsiveContainer';
 import logo from './logo.svg';
 import './App.css';
@@ -20,6 +21,7 @@ class Router extends Component {
           <Route exact path="/home" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/contact" component={ContactPage} />
+          <Route exact path="/tic-tac-toe" component={TictactoePage} />
         </ResponsiveContainer>
       </BrowserRouter>
     );
