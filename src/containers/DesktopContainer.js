@@ -37,6 +37,7 @@ class DesktopContainer extends Component {
                   <Menu.Item as={Link} to='/home' active={isHome}>Home</Menu.Item>
                   <Menu.Item as={Link} to='/about' active={window.location.pathname==='/about'}>About</Menu.Item>
                   <Menu.Item as={Link} to='/contact' active={window.location.pathname==='/contact'}>Contact</Menu.Item>
+                  <Menu.Item as={Link} to='/tic-tac-toe' active={window.location.pathname==='/tic-tac-toe'}>Tic Tac Toe</Menu.Item>
                 </Container>
               </Menu>
               { isHome ? (<HomepageHeading />) : null }
